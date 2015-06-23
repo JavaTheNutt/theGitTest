@@ -1,3 +1,4 @@
-/**
- * Created by Joe on 23/06/2015.
- */
+angular
+    .module('app', [
+       'ui.router'
+    ])
