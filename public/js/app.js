@@ -15,7 +15,19 @@ angular
             .state('home', {
                 url: '/',
                 templateUrl: 'templates/home.html',
-                controller: 'homeCtrl'
+                controller: 'homeCtrl'/*,*/
+                /*****************NOT WORKING***************/
+                /*THROWS A RESTRICTED URI ERROR, POSSIBLE ISSUE WITH THE PATH*/
+                /*Resolve is used to access any required services before anything else is loaded*/
+                /*resolve: {
+                 /!*This will return the data from the JSON object located in the api directory*!/
+                 friends : ['$http', function($http){
+                 return $http.get('../api/friends.json').then(function (response) {
+                 return response.data;
+                 });
+                 }]
+                 }*/
+                /*******************NOT WORKING*******************/
             })
             .state('about', {
                 url: '/about',
