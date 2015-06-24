@@ -1,4 +1,18 @@
 <h1 class="topLine">Welcome to the {{title}} page!</h1>
 <ul>
+    <!--This will perform an each function on the array items. It
+    will then create a list element for each item in items-->
     <li ng-repeat="item in items">{{item}}</li>
 </ul>
+<!--ng-model is used to bind an element to a variable. This means that
+    when someone types into the input box, the variable title will be be
+    changed. The changes will be instantly shown wherever the variable
+    is printed-->
+<input type="text" ng-model="title">
+<!-- ng-model can also be bound to variables that do not already exist
+    in the controller-->
+<input type="text" ng-model="myValue">
+{{myValue}}
+
+<!-- This will create a select menu that will hold the values stored in the items array-->
+<select ng-model="mySelectedValue" ng-options="value for value in items"></select>
