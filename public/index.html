@@ -4,13 +4,16 @@
     <meta charset="utf-8">
     <title>My App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
-    <link href="css/myStyle.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/myStyle.css">
 </head>
 <body>
+    <!--ng-app="app" will instantiate the app module on this element-->
     <div class="container" ng-app="app">
+        <!--ng-include is used to attach a html template to the page-->
         <header ng-include="'templates/header.html'"></header>
+        <!-- ui-view is used to specify where our views will be placed-->
         <div ui-view></div>
         <footer ng-include="'templates/footer.html'"></footer>
     </div>
